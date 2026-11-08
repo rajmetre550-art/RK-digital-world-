@@ -1,164 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RK DIGITAL WORLD</title>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #080808;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-header {
-  padding: 25px 15px;
-  text-align: center;
-  border-bottom: 1px solid #b8860b;
-}
-.logo {
-  color: #ffd700;
-  font-size: 30px;
-  font-weight: bold;
-  text-shadow: 0 0 15px #d4af37;
-}
-nav {
-  text-align: center;
-  padding: 20px 5px;
-}
-nav a {
-  color: #ffd700;
-  text-decoration: none;
-  margin: 10px;
-}
-.hero {
-  text-align: center;
-  padding: 90px 15px;
-  background: linear-gradient(135deg,#171717,#000);
-}
-h1 {
-  color: #ffd700;
-  font-size: 38px;
-  margin-bottom: 20px;
-}
-p {
-  color: #ddd;
-  line-height: 1.7;
-}
-button {
-  background: linear-gradient(45deg,#b8860b,#ffd700);
-  color: black;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  margin-top: 25px;
-}
-section {
-  padding: 45px 15px;
-  text-align: center;
-}
-h2 {
-  color: #ffd700;
-  margin-bottom: 25px;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-}
-.card {
-  background: #171717;
-  border: 1px solid #b8860b;
-  padding: 30px 15px;
-  border-radius: 15px;
-}
-.card h3 {
-  color: #ffd700;
-  margin-bottom: 12px;
-}
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #b8860b;
-  color: #aaa;
-}
-</style>
-</head>
-
-<body>
-
+<title>RK DIGITAL WORLD</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:25px;border-bottom:1px solid #b8860b}
+.logo{color:#ffd700;font-size:30px;font-weight:bold;text-shadow:0 0 15px #d4af37}
+nav{text-align:center;padding:20px 5px}
+nav a{color:#ffd700;text-decoration:none;margin:10px;display:inline-block}
+.hero{text-align:center;padding:90px 15px;background:linear-gradient(135deg,#171717,#000)}
+h1{color:#ffd700;font-size:32px;margin-bottom:20px}
+p{color:#ddd;line-height:1.7}
+.explore-btn{display:inline-block;background:linear-gradient(45deg,#b8860b,#ffd700);color:black;padding:14px 28px;border-radius:25px;font-weight:bold;margin-top:25px;text-decoration:none}
+section{padding:45px 15px;text-align:center;scroll-margin-top:20px}
+h2{color:#ffd700;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#171717;border:1px solid #b8860b;padding:30px 15px;border-radius:15px}
+.card h3{color:#ffd700;margin-bottom:12px}
+footer{text-align:center;padding:25px;border-top:1px solid #b8860b;color:#aaa}
+</style></head><body>
 <header>
 <div class="logo">RK DIGITAL WORLD</div>
 <p>All in One Digital World</p>
-</header>
-
-<nav>
+</header><nav>
 <a href="#home">Home</a>
 <a href="#tools">AI Tools</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
-</nav>
-
-<div class="hero" id="home">
+</nav><div class="hero" id="home">
 <h1>Welcome to RK DIGITAL WORLD</h1>
 <p>Explore AI Tools, Technology and Digital Services.</p>
-<button onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">
-Explore Now
-</button>
-</div>
-
-<section id="tools">
+<a href="#tools" class="explore-btn">Explore Now</a>
+</div><section id="tools">
 <h2>🤖 AI Tools</h2>
 <div class="cards">
-<div class="card">
-<h3>AI Writing</h3>
-<p>Discover tools for writing and creativity.</p>
+<div class="card"><h3>AI Writing</h3><p>Discover tools for writing and creativity.</p></div>
+<div class="card"><h3>AI Image</h3><p>Explore creative AI image tools.</p></div>
+<div class="card"><h3>AI Video</h3><p>Discover AI video creation tools.</p></div>
 </div>
-<div class="card">
-<h3>AI Image</h3>
-<p>Explore creative AI image tools.</p>
-</div>
-<div class="card">
-<h3>AI Video</h3>
-<p>Discover AI video creation tools.</p>
-</div>
-</div>
-</section>
-
-<section id="services">
+</section><section id="services">
 <h2>💼 Digital Services</h2>
 <div class="cards">
-<div class="card">
-<h3>Technology</h3>
-<p>Explore digital technology.</p>
+<div class="card"><h3>Technology</h3><p>Explore digital technology.</p></div>
+<div class="card"><h3>Online Shopping</h3><p>Discover useful shopping resources.</p></div>
+<div class="card"><h3>Learn & Grow</h3><p>Build your digital skills.</p></div>
 </div>
-<div class="card">
-<h3>Online Shopping</h3>
-<p>Discover useful shopping resources.</p>
-</div>
-<div class="card">
-<h3>Learn & Grow</h3>
-<p>Build your digital skills.</p>
-</div>
-</div>
-</section>
-
-<section id="contact">
+</section><section id="contact">
 <h2>Contact Us</h2>
 <p>Welcome to RK DIGITAL WORLD.</p>
-</section>
-
-<footer>
+</section><footer>
 <p>© 2026 RK DIGITAL WORLD. All Rights Reserved.</p>
 </footer>
-
 </body>
-  </html>
-
-
+</html>
