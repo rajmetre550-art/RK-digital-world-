@@ -3,19 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RK DIGITAL WORLD | All in One Smart Digital Platform</title>
-/* PREMIUM DESIGN */
+
+  
+
+</style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: white;
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  letter-spacing: 1px;
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #FFD700;
+  font-size: 32px;
 }
 
 h2 {
@@ -24,254 +41,105 @@ h2 {
   margin-bottom: 25px;
 }
 
-/* PREMIUM CARDS */
-
-.card {
-  border: 1px solid rgba(255, 215, 0, 0.35);
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  padding: 20px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #FFD700;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-}
-
-/* BUTTON EFFECTS */
-
-button, .btn, a {
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #FFD700;
-  color: #000;
-}
-
-/* MOBILE OPTIMIZATION */
-
-@media (max-width: 768px) {
-
-  .container {
-    width: 94%;
-    margin: auto;
-  }
-
-  .card {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 23px;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-
-  nav a {
-    padding: 8px;
-    font-size: 14px;
-  }
-}
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #080808;
-  color: white;
-  line-height: 1.6;
-}
-
-header {
-  text-align: center;
-  padding: 55px 15px;
-  background: linear-gradient(135deg, #171717, #302300);
-  border-bottom: 2px solid gold;
-}
-
-header h1 {
-  color: gold;
-  font-size: 34px;
-}
-
-header p {
-  margin-top: 10px;
-  color: #ddd;
-}
-
-.navbar {
+nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   padding: 15px;
-  background: #151515;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid gold;
 }
 
-.navbar a {
-  color: gold;
+nav a {
+  color: white;
   text-decoration: none;
-  padding: 8px 13px;
-  border: 1px solid gold;
-  border-radius: 20px;
-  font-size: 13px;
+  padding: 10px;
 }
 
-.navbar a:hover {
-  background: gold;
-  color: black;
+nav a:hover {
+  color: #FFD700;
 }
 
-.hero {
+section {
+  padding: 45px 20px;
   text-align: center;
-  padding: 65px 15px;
-  background: radial-gradient(circle, #302300, #080808);
-}
-
-.hero h2 {
-  color: gold;
-  font-size: 29px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #ddd;
-  margin-bottom: 25px;
-}
-
-.button {
-  display: inline-block;
-  background: gold;
-  color: black;
-  padding: 12px 22px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.section {
-  padding: 45px 15px;
-  text-align: center;
-}
-
-.section h2 {
-  color: gold;
-  margin-bottom: 25px;
-  font-size: 27px;
 }
 
 .container {
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
 }
 
 .card {
   background: #171717;
-  border: 1px solid #b99a28;
-  border-radius: 14px;
-  padding: 22px 15px;
+  border: 1px solid #665500;
+  border-radius: 15px;
+  padding: 22px;
+  margin: 12px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px #8a701d;
+  border-color: #FFD700;
+  box-shadow: 0 5px 20px #665500;
 }
 
-.card h3 {
-  color: gold;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #ccc;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.card a {
+button, .btn {
   display: inline-block;
-  background: gold;
-  color: black;
-  padding: 8px 18px;
-  border-radius: 20px;
+  background: #FFD700;
+  color: #000;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
   text-decoration: none;
+  cursor: pointer;
   font-weight: bold;
-  font-size: 13px;
 }
 
-.search-box {
+button:hover, .btn:hover {
+  background: white;
+}
+
+input, textarea {
   width: 90%;
   max-width: 500px;
-  padding: 13px;
-  border-radius: 25px;
-  border: 1px solid gold;
-  background: #171717;
-  color: white;
-  margin-bottom: 25px;
-  font-size: 15px;
-}
-
-.hidden {
-  display: none;
-}
-
-.about p {
-  max-width: 750px;
-  margin: auto;
-  color: #ddd;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 7px;
+  border: 1px solid #FFD700;
 }
 
 footer {
-  background: #151515;
-  border-top: 1px solid gold;
-  padding: 25px 10px;
+  background: #111;
+  color: #FFD700;
   text-align: center;
-  color: #ccc;
+  padding: 25px;
 }
 
-footer a {
-  color: gold;
-  text-decoration: none;
-  margin: 5px;
-}
-
-@media(max-width:600px) {
-  header h1 {
-    font-size: 27px;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 25px;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  h2 {
+    font-size: 22px;
   }
 
-  .section h2 {
-    font-size: 23px;
+  .container {
+    width: 96%;
   }
-}
-</style>
+
+  nav {
+    gap: 5px;
+  }
+
+  .card {
+    margin: 10px 0;
+  }
+}  
 </head>
+  
 
 <body>
 
