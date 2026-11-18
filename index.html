@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
+<title>RK DIGITAL WORLD</title>
 
-</style>
+<meta name="description" content="Explore AI tools, useful apps, digital technology and free learning resources at RK DIGITAL WORLD.">
+
+<style>
+
+/* BASIC SETTINGS */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,126 +28,270 @@ body {
   background: #080808;
   color: white;
   overflow-x: hidden;
+  line-height: 1.6;
 }
+
+/* HEADER */
 
 header {
-  background: #111;
-  padding: 20px;
+  background: linear-gradient(135deg, #111, #292000);
+  padding: 35px 15px;
   text-align: center;
+  border-bottom: 2px solid gold;
 }
 
-h1 {
+header h1 {
   color: #FFD700;
   font-size: 32px;
 }
 
-h2 {
-  color: #FFD700;
-  text-align: center;
-  margin-bottom: 25px;
+header p {
+  color: #ddd;
+  margin-top: 8px;
 }
 
+/* NAVIGATION */
+
 nav {
+  background: #111;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
 nav a:hover {
-  color: #FFD700;
+  background: gold;
+  color: black;
 }
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #151515, #302500);
+}
+
+.hero h2 {
+  font-size: 30px;
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #ddd;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  background: gold;
+  color: black;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
 
 section {
   padding: 45px 20px;
   text-align: center;
 }
 
+h2 {
+  color: gold;
+  margin-bottom: 25px;
+}
+
 .container {
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
+
+/* CARDS */
 
 .card {
   background: #171717;
   border: 1px solid #665500;
   border-radius: 15px;
   padding: 22px;
-  margin: 12px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #FFD700;
+  border-color: gold;
   box-shadow: 0 5px 20px #665500;
 }
 
-button, .btn {
+.card h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.card a {
   display: inline-block;
-  background: #FFD700;
-  color: #000;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 8px;
+  background: gold;
+  color: black;
+  padding: 9px 18px;
+  border-radius: 6px;
   text-decoration: none;
-  cursor: pointer;
   font-weight: bold;
 }
 
-button:hover, .btn:hover {
+.card a:hover {
   background: white;
 }
+
+.hidden {
+  display: none !important;
+}
+
+/* SEARCH */
+
+.search-box {
+  width: 90%;
+  max-width: 500px;
+  padding: 13px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid gold;
+  font-size: 16px;
+}
+
+/* ABOUT */
+
+.about p {
+  color: #ddd;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* CONTACT */
 
 input, textarea {
   width: 90%;
   max-width: 500px;
-  padding: 12px;
+  padding: 13px;
   margin: 10px;
   border-radius: 7px;
-  border: 1px solid #FFD700;
+  border: 1px solid gold;
+  background: #171717;
+  color: white;
+  font-size: 15px;
 }
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  background: gold;
+  color: black;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: white;
+}
+
+/* FOOTER */
 
 footer {
   background: #111;
-  color: #FFD700;
+  color: gold;
   text-align: center;
-  padding: 25px;
+  padding: 25px 15px;
 }
 
-@media (max-width: 768px) {
-  h1 {
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+footer a:hover {
+  color: gold;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 600px) {
+
+  header h1 {
     font-size: 25px;
   }
 
-  h2 {
-    font-size: 22px;
-  }
-
-  .container {
-    width: 96%;
+  .hero h2 {
+    font-size: 24px;
   }
 
   nav {
-    gap: 5px;
+    gap: 4px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  section {
+    padding: 35px 12px;
+  }
+
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 
   .card {
-    margin: 10px 0;
+    width: 100%;
   }
-}  
+}
+
+</style>
 </head>
-  
 
 <body>
+
+<!-- HEADER -->
 
 <header id="home">
   <h1>👑 RK DIGITAL WORLD</h1>
@@ -149,439 +299,523 @@ footer {
   <p>Explore • Learn • Create • Grow</p>
 </header>
 
-<nav class="navbar">
+<!-- NAVIGATION -->
+
+<nav>
   <a href="#home">Home</a>
   <a href="#tools">AI Tools</a>
+  <a href="#trending">Trending</a>
   <a href="#apps">Apps</a>
   <a href="#learning">Learning</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <h2>Welcome to RK DIGITAL WORLD</h2>
-  <p>Discover AI Tools, Digital Technology, Useful Apps and Free Learning Resources.</p>
+
+  <p>
+    Discover AI Tools, Digital Technology,
+    Useful Apps and Free Learning Resources.
+  </p>
+
   <a class="button" href="#tools">Explore Now 🚀</a>
+
 </section>
 
-<section class="section" id="tools">
-  <h2>🤖 Explore AI Tools</h2>
+<!-- AI TOOLS -->
 
-  <input
-    class="search-box"
-    type="text"
-    id="searchInput"
-    placeholder="🔍 Search AI Tools..."
-    oninput="searchTools()"
-  >
+<section id="tools">
 
-  <div class="container" id="toolContainer">
+<h2>🤖 Explore AI Tools</h2>
 
-    <div class="card">
-      <h3>🤖 ChatGPT</h3>
-      <p>AI assistant for writing and learning.</p>
-      <a href="https://chatgpt.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<input
+  class="search-box"
+  type="text"
+  id="searchInput"
+  placeholder="🔍 Search AI Tools..."
+>
 
-    <div class="card">
-      <h3>🎨 Canva</h3>
-      <p>Create designs, posters and graphics.</p>
-      <a href="https://www.canva.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="container" id="toolContainer">
 
-    <div class="card">
-      <h3>🎬 CapCut</h3>
-      <p>Edit videos and create content.</p>
-      <a href="https://www.capcut.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🤖 ChatGPT</h3>
+<p>AI assistant for writing and learning.</p>
+<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>✨ Gemini</h3>
-      <p>Explore Google's AI assistant.</p>
-      <a href="https://gemini.google.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎨 Canva</h3>
+<p>Create designs, posters and graphics.</p>
+<a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎨 Adobe Firefly</h3>
-      <p>Create AI images and designs.</p>
-      <a href="https://firefly.adobe.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎬 CapCut</h3>
+<p>Edit videos and create content.</p>
+<a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎥 Runway</h3>
-      <p>Explore AI video creation.</p>
-      <a href="https://runwayml.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>✨ Gemini</h3>
+<p>Explore Google's AI assistant.</p>
+<a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎙️ ElevenLabs</h3>
-      <p>AI voice and audio tools.</p>
-      <a href="https://elevenlabs.io/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎨 Adobe Firefly</h3>
+<p>Create AI images and designs.</p>
+<a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>✍️ Grammarly</h3>
-      <p>Improve writing and grammar.</p>
-      <a href="https://www.grammarly.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎥 Runway</h3>
+<p>Explore AI video creation.</p>
+<a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🧠 Claude</h3>
-      <p>AI assistant for ideas and writing.</p>
-      <a href="https://claude.ai/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎙️ ElevenLabs</h3>
+<p>AI voice and audio tools.</p>
+<a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🔎 Perplexity</h3>
-      <p>AI-powered information search.</p>
-      <a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>✍️ Grammarly</h3>
+<p>Improve writing and grammar.</p>
+<a href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>📝 Notion</h3>
-      <p>Organize notes and projects.</p>
-      <a href="https://www.notion.so/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🧠 Claude</h3>
+<p>AI assistant for ideas and writing.</p>
+<a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>📚 Coursera</h3>
-      <p>Discover online courses.</p>
-      <a href="https://www.coursera.org/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🔎 Perplexity</h3>
+<p>AI-powered information search.</p>
+<a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎨 Leonardo AI</h3>
-      <p>Create AI images.</p>
-      <a href="https://leonardo.ai/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>📝 Notion</h3>
+<p>Organize notes and projects.</p>
+<a href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🖼️ Ideogram</h3>
-      <p>Create AI designs and images.</p>
-      <a href="https://ideogram.ai/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>📚 Coursera</h3>
+<p>Discover online courses.</p>
+<a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎨 Microsoft Designer</h3>
-      <p>Create designs using AI.</p>
-      <a href="https://designer.microsoft.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎨 Leonardo AI</h3>
+<p>Create AI images.</p>
+<a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎬 Pika</h3>
-      <p>Create AI videos.</p>
-      <a href="https://pika.art/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🖼️ Ideogram</h3>
+<p>Create AI designs and images.</p>
+<a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎥 InVideo AI</h3>
-      <p>Create videos using AI.</p>
-      <a href="https://invideo.io/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎨 Microsoft Designer</h3>
+<p>Create designs using AI.</p>
+<a href="https://designer.microsoft.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎙️ Murf AI</h3>
-      <p>Create AI voiceovers.</p>
-      <a href="https://murf.ai/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎬 Pika</h3>
+<p>Create AI videos.</p>
+<a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🔊 Speechify</h3>
-      <p>Convert text into speech.</p>
-      <a href="https://speechify.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎥 InVideo AI</h3>
+<p>Create videos using AI.</p>
+<a href="https://invideo.io/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎵 Suno AI</h3>
-      <p>Create music using AI.</p>
-      <a href="https://suno.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎙️ Murf AI</h3>
+<p>Create AI voiceovers.</p>
+<a href="https://murf.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎵 Udio</h3>
-      <p>Explore AI music creation.</p>
-      <a href="https://udio.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🔊 Speechify</h3>
+<p>Convert text into speech.</p>
+<a href="https://speechify.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>📊 Gamma</h3>
-      <p>Create presentations using AI.</p>
-      <a href="https://gamma.app/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎵 Suno AI</h3>
+<p>Create music using AI.</p>
+<a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>📑 Slidesgo</h3>
-      <p>Explore presentation templates.</p>
-      <a href="https://slidesgo.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🎵 Udio</h3>
+<p>Explore AI music creation.</p>
+<a href="https://udio.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>💻 Replit</h3>
-      <p>Build and code projects online.</p>
-      <a href="https://replit.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>📊 Gamma</h3>
+<p>Create presentations using AI.</p>
+<a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>⌨️ Cursor</h3>
-      <p>AI-powered coding editor.</p>
-      <a href="https://cursor.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>📑 Slidesgo</h3>
+<p>Explore presentation templates.</p>
+<a href="https://slidesgo.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🔬 Elicit</h3>
-      <p>AI research assistant.</p>
-      <a href="https://elicit.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>💻 Replit</h3>
+<p>Build and code projects online.</p>
+<a href="https://replit.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>📚 NotebookLM</h3>
-      <p>Research and learn with AI.</p>
-      <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>⌨️ Cursor</h3>
+<p>AI-powered coding editor.</p>
+<a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>✍️ QuillBot</h3>
-      <p>Writing and grammar assistance.</p>
-      <a href="https://quillbot.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🔬 Elicit</h3>
+<p>AI research assistant.</p>
+<a href="https://elicit.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🌍 DeepL</h3>
-      <p>Translate different languages.</p>
-      <a href="https://www.deepl.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>📚 NotebookLM</h3>
+<p>Research and learn with AI.</p>
+<a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🧹 Cleanup Pictures</h3>
-      <p>Remove unwanted objects from images.</p>
-      <a href="https://cleanup.pictures/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>✍️ QuillBot</h3>
+<p>Writing and grammar assistance.</p>
+<a href="https://quillbot.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🖼️ Remove.bg</h3>
-      <p>Remove image backgrounds.</p>
-      <a href="https://www.remove.bg/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🌍 DeepL</h3>
+<p>Translate different languages.</p>
+<a href="https://www.deepl.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-    <div class="card">
-      <h3>🎬 VEED</h3>
-      <p>Online video editing tools.</p>
-      <a href="https://www.veed.io/" target="_blank" rel="noopener">Explore</a>
-    </div>
+<div class="card">
+<h3>🧹 Cleanup Pictures</h3>
+<p>Remove unwanted objects from images.</p>
+<a href="https://cleanup.pictures/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-  </div>
+<div class="card">
+<h3>🖼️ Remove.bg</h3>
+<p>Remove image backgrounds.</p>
+<a href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
+
+<div class="card">
+<h3>🎬 VEED</h3>
+<p>Online video editing tools.</p>
+<a href="https://www.veed.io/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="trending">
+<!-- TRENDING -->
+
+<section id="trending">
+
 <h2>🔥 Trending AI Tools</h2>
-<p style="color:#ddd;margin-bottom:20px;">Discover Popular AI Tools</p>
+
+<p style="color:#ddd;margin-bottom:20px;">
+Discover Popular AI Tools
+</p>
 
 <div class="container">
 
 <div class="card">
 <h3>🔥 Google AI Studio</h3>
 <p>Explore Google's AI development tools.</p>
-<a href="https://aistudio.google.com/" target="_blank" rel="noopener">Explore</a>
+<a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🎨 Ideogram</h3>
 <p>Create AI images and designs.</p>
-<a href="https://ideogram.ai/" target="_blank" rel="noopener">Explore</a>
+<a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🎬 Kling AI</h3>
 <p>Explore AI video generation.</p>
-<a href="https://klingai.com/" target="_blank" rel="noopener">Explore</a>
+<a href="https://klingai.com/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🎥 Pika</h3>
 <p>Create videos using AI.</p>
-<a href="https://pika.art/" target="_blank" rel="noopener">Explore</a>
+<a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🎙️ ElevenLabs</h3>
 <p>Explore AI voice generation.</p>
-<a href="https://elevenlabs.io/" target="_blank" rel="noopener">Explore</a>
+<a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🧠 DeepSeek</h3>
 <p>Explore AI chat and assistance.</p>
-<a href="https://www.deepseek.com/" target="_blank" rel="noopener">Explore</a>
+<a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>📊 Gamma</h3>
 <p>Create presentations using AI.</p>
-<a href="https://gamma.app/" target="_blank" rel="noopener">Explore</a>
+<a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 <div class="card">
 <h3>🎨 Adobe Firefly</h3>
 <p>Create AI images and designs.</p>
-<a href="https://firefly.adobe.com/" target="_blank" rel="noopener">Explore</a>
+<a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
 </div>
-</section> <section class="section" id="apps">
-  <h2>📱 Useful Apps</h2>
-
-  <div class="container">
-
-    <div class="card">
-      <h3>▶️ YouTube</h3>
-      <p>Watch and create videos.</p>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
-
-    <div class="card">
-      <h3>💬 WhatsApp</h3>
-      <p>Messaging and communication.</p>
-      <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
-
-    <div class="card">
-      <h3>📸 Instagram</h3>
-      <p>Share photos and videos.</p>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
-
-    <div class="card">
-      <h3>💻 GitHub</h3>
-      <p>Explore coding and projects.</p>
-      <a href="https://github.com/" target="_blank" rel="noopener">Explore</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="section" id="learning">
-  <h2>📚 Free Learning</h2>
+<!-- APPS -->
 
-  <div class="container">
+<section id="apps">
 
-    <div class="card">
-      <h3>🎓 Khan Academy</h3>
-      <p>Learn different subjects online.</p>
-      <a href="https://www.khanacademy.org/" target="_blank" rel="noopener">Learn More</a>
-    </div>
+<h2>📱 Useful Apps</h2>
 
-    <div class="card">
-      <h3>💡 Google Grow</h3>
-      <p>Discover digital skills and training.</p>
-      <a href="https://grow.google/" target="_blank" rel="noopener">Learn More</a>
-    </div>
+<div class="container">
 
-    <div class="card">
-      <h3>💻 freeCodeCamp</h3>
-      <p>Learn coding and web development.</p>
-      <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">Learn More</a>
-    </div>
+<div class="card">
+<h3>▶️ YouTube</h3>
+<p>Watch and create videos.</p>
+<a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
 
-  </div>
+<div class="card">
+<h3>💬 WhatsApp</h3>
+<p>Messaging and communication.</p>
+<a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
+
+<div class="card">
+<h3>📸 Instagram</h3>
+<p>Share photos and videos.</p>
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
+
+<div class="card">
+<h3>💻 GitHub</h3>
+<p>Explore coding and projects.</p>
+<a href="https://github.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</div>
+
+</div>
 </section>
 
-<section class="section about" id="about">
-  <h2>👑 About RK DIGITAL WORLD</h2>
+<!-- LEARNING -->
 
-  <p>
-    Welcome to RK DIGITAL WORLD!
-    Discover AI tools, digital technology, useful apps and learning resources.
-    Our mission is to make technology simple and accessible for everyone.
-  </p>
+<section id="learning">
 
-  <h3 style="color:gold;margin-top:25px;">Our Mission</h3>
+<h2>📚 Free Learning</h2>
 
-  <p>
-    🤖 Explore AI Technology<br>
-    📚 Learn Digital Skills<br>
-    💡 Discover Useful Tools<br>
-    🚀 Grow Your Knowledge
-  </p>
+<div class="container">
+
+<div class="card">
+<h3>🎓 Khan Academy</h3>
+<p>Learn different subjects online.</p>
+<a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</div>
+
+<div class="card">
+<h3>💡 Google Grow</h3>
+<p>Discover digital skills and training.</p>
+<a href="https://grow.google/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</div>
+
+<div class="card">
+<h3>💻 freeCodeCamp</h3>
+<p>Learn coding and web development.</p>
+<a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="affiliate">
-  <h2>💰 Recommended Products</h2>
+<!-- ABOUT -->
 
-  <div class="container">
-    <div class="card">
-      <h3>🛒 Amazon Shopping</h3>
-      <p>Discover useful products and shopping offers.</p>
-      <a href="https://www.amazon.in/" target="_blank" rel="noopener">Explore Products</a>
-    </div>
-  </div>
+<section id="about" class="about">
 
-  <p style="color:#aaa;margin-top:20px;font-size:13px;">
-    Affiliate links can be added after joining an affiliate program.
-  </p>
+<h2>👑 About RK DIGITAL WORLD</h2>
+
+<p>
+Welcome to RK DIGITAL WORLD!
+Discover AI tools, digital technology, useful apps
+and learning resources.
+Our mission is to make technology simple and accessible for everyone.
+</p>
+
+<h3 style="color:gold;margin-top:25px;">
+Our Mission
+</h3>
+
+<p>
+🤖 Explore AI Technology<br>
+📚 Learn Digital Skills<br>
+💡 Discover Useful Tools<br>
+🚀 Grow Your Knowledge
+</p>
+
 </section>
 
-<section class="section" id="contact">
-  <h2>📩 Contact Us</h2>
-<form action="https://formsubmit.co/rajmetre550@gmail.com" method="POST">
+<!-- RECOMMENDED PRODUCTS -->
 
-  <input type="text" name="name" placeholder="Your Name" required>
+<section id="affiliate">
 
-  <input type="email" name="email" placeholder="Your Email" required>
+<h2>💰 Recommended Products</h2>
 
-  <textarea name="message" placeholder="Your Message" required></textarea>
+<div class="container">
 
-  <button type="submit">Send Message 📩</button>
+<div class="card">
+<h3>🛒 Amazon Shopping</h3>
+<p>Discover useful products and shopping offers.</p>
+<a href="https://www.amazon.in/" target="_blank" rel="noopener noreferrer">Explore Products</a>
+</div>
+
+</div>
+
+<p style="color:#aaa;margin-top:20px;font-size:13px;">
+Affiliate links can be added after joining an eligible affiliate program.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>📩 Contact Us</h2>
+
+<form action="https://formsubmit.com.rajmetre550@gmail.com" method="POST">
+
+<input
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  required
+>
+
+<input
+  type="email"
+  name="email"
+  placeholder="Your Email"
+  required
+>
+
+<textarea
+  name="message"
+  placeholder="Your Message"
+  required
+></textarea>
+
+<button type="submit">
+Send Message 📩
+</button>
 
 </form>
-  
 
-  <p style="color:#aaa;font-size:13px;margin-top:10px;">
-    
-  </p>
 </section>
 
-<section class="section" id="privacy">
-  <h2>🔐 Privacy Policy</h2>
+<!-- PRIVACY -->
 
- <p style="color:#ddd;max-width:750px;margin:auto;line-height:1.8;">
-  RK DIGITAL WORLD respects your privacy.
-  Our website provides links to AI tools, apps, and learning resources.
-  These external websites may collect information under their own privacy policies.
-  Our Contact Form uses FormSubmit to process messages.
-  Information submitted through the form may be shared with this third-party service.
-  Please avoid sharing passwords, financial details, or other sensitive information.
-  We do not guarantee the privacy practices of external websites.
-</p> 
+<section id="privacy">
+
+<h2>🔐 Privacy Policy</h2>
+
+<p style="color:#ddd;max-width:750px;margin:auto;line-height:1.8;">
+
+RK DIGITAL WORLD provides links to AI tools, apps and learning resources.
+
+External websites may collect information under their own privacy policies.
+
+Our contact form uses FormSubmit to process messages.
+Information submitted through the form may be processed by this third-party service.
+
+Please do not share passwords, financial details or other sensitive information.
+
+We do not control the privacy practices of external websites.
+
+</p>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
-  <p>© 2026 RK DIGITAL WORLD | All Rights Reserved</p>
-  <p>Explore • Learn • Create • Grow</p>
 
-  <p style="margin-top:12px;">
-    <a href="#home">Home</a> |
-    <a href="#about">About</a> |
-    <a href="#contact">Contact</a> |
-    <a href="#privacy">Privacy</a>
-  </p>
+<p>© 2026 RK DIGITAL WORLD | All Rights Reserved</p>
+
+<p>Explore • Learn • Create • Grow</p>
+
+<p style="margin-top:12px;">
+
+<a href="#home">Home</a> |
+<a href="#about">About</a> |
+<a href="#contact">Contact</a> |
+<a href="#privacy">Privacy</a>
+
+</p>
+
 </footer>
 
+<!-- SEARCH FUNCTION -->
+
 <script>
-function searchTools() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let cards = document.querySelectorAll("#toolContainer .card");
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function() {
+
+  const searchText = this.value.toLowerCase();
+
+  const cards = document.querySelectorAll("#toolContainer .card");
 
   cards.forEach(function(card) {
-    let text = card.innerText.toLowerCase();
 
-    if (text.includes(input)) {
+    const cardText = card.innerText.toLowerCase();
+
+    if (cardText.includes(searchText)) {
       card.classList.remove("hidden");
     } else {
       card.classList.add("hidden");
     }
+
   });
-}
+
+});
+
 </script>
 
 </body>
-</html>
+  </html>
