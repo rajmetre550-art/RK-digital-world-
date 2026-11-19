@@ -863,6 +863,23 @@ async function signUp() {
 }
 
 async function login() {
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value;
+
+const { data, error } = await supabaseClient.auth.signInWithPassword({
+email: email,
+password: password
+});
+
+if (error) {
+document.getElementById("status").innerText =
+"Login Error: " + error.message;
+return;
+}
+
+document.getElementById("status").innerText =
+"Login Successful! Welcome to RK DIGITAL WORLD.";
+  }
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
