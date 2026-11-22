@@ -1,917 +1,436 @@
-<h1>RK DIGITAL WORLD 2026</h1>
-<p>All in One Smart App</p>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RK DIGITAL WORLD</title>
+<title>RK DIGITAL WORLD 2026</title>
 
-<meta name="description" content="Explore AI tools, useful apps, digital technology and free learning resources at RK DIGITAL WORLD.">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-
-/* BASIC SETTINGS */
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #080808;
+  background: #080d1c;
   color: white;
-  overflow-x: hidden;
-  line-height: 1.6;
 }
 
-/* HEADER */
-
 header {
-  background: linear-gradient(135deg, #111, #292000);
-  padding: 35px 15px;
+  background: #111a32;
+  padding: 20px;
   text-align: center;
   border-bottom: 2px solid gold;
 }
 
 header h1 {
-  color: #FFD700;
-  font-size: 32px;
+  color: gold;
+  font-size: 24px;
 }
 
 header p {
-  color: #ddd;
+  color: #ccc;
   margin-top: 8px;
 }
 
-/* NAVIGATION */
-
 nav {
-  background: #111;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  background: #172340;
+  padding: 12px;
   gap: 10px;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
-
-nav a:hover {
-  background: gold;
-  color: black;
-}
-
-/* HERO */
-
-.hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #151515, #302500);
-}
-
-.hero h2 {
-  font-size: 30px;
-  color: gold;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #ddd;
-  max-width: 650px;
-  margin: auto;
-}
-
-/* BUTTONS */
-
-.button {
-  display: inline-block;
-  background: gold;
-  color: black;
-  padding: 12px 25px;
-  margin-top: 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: white;
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
-
-section {
-  padding: 45px 20px;
-  text-align: center;
-}
-
-h2 {
-  color: gold;
-  margin-bottom: 25px;
+  padding: 10px;
 }
 
 .container {
-  width: 95%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  padding: 20px;
 }
-
-/* CARDS */
 
 .card {
-  background: #171717;
-  border: 1px solid #665500;
+  background: #172340;
+  padding: 20px;
+  margin: 15px 0;
   border-radius: 15px;
-  padding: 22px;
-  transition: 0.3s;
+  border: 1px solid #354568;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: gold;
-  box-shadow: 0 5px 20px #665500;
-}
-
-.card h3 {
+.card h2 {
   color: gold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.card p {
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.card a {
-  display: inline-block;
-  background: gold;
-  color: black;
-  padding: 9px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.card a:hover {
-  background: white;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* SEARCH */
-
-.search-box {
-  width: 90%;
-  max-width: 500px;
+input {
+  width: 100%;
   padding: 13px;
-  margin-bottom: 25px;
+  margin: 8px 0;
   border-radius: 8px;
-  border: 1px solid gold;
-  font-size: 16px;
-}
-
-/* ABOUT */
-
-.about p {
-  color: #ddd;
-  max-width: 750px;
-  margin: auto;
-}
-
-/* CONTACT */
-
-input, textarea {
-  width: 90%;
-  max-width: 500px;
-  padding: 13px;
-  margin: 10px;
-  border-radius: 7px;
-  border: 1px solid gold;
-  background: #171717;
-  color: white;
-  font-size: 15px;
-}
-
-textarea {
-  min-height: 120px;
+  border: none;
+  background: white;
+  color: black;
 }
 
 button {
   background: gold;
-  color: black;
-  padding: 13px 25px;
+  color: #111;
+  padding: 12px 18px;
   border: none;
-  border-radius: 7px;
-  cursor: pointer;
+  border-radius: 8px;
+  margin: 5px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 button:hover {
-  background: white;
+  background: orange;
 }
 
-/* FOOTER */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+  gap: 15px;
+}
+
+.feature {
+  background: #202f50;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.feature h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+#dashboard {
+  display: none;
+}
+
+#status {
+  padding: 12px;
+  margin-top: 12px;
+  color: #38e6a0;
+  overflow-wrap: anywhere;
+}
 
 footer {
-  background: #111;
-  color: gold;
+  background: #111a32;
   text-align: center;
-  padding: 25px 15px;
+  padding: 25px;
+  color: #aaa;
+  margin-top: 30px;
 }
-
-footer a {
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-}
-
-footer a:hover {
-  color: gold;
-}
-
-/* MOBILE DESIGN */
-
-@media (max-width: 600px) {
-
-  header h1 {
-    font-size: 25px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  nav {
-    gap: 4px;
-  }
-
-  nav a {
-    font-size: 13px;
-    padding: 7px;
-  }
-
-  section {
-    padding: 35px 12px;
-  }
-
-  .container {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    width: 100%;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header id="home">
-  <h1>👑 RK DIGITAL WORLD</h1>
-  <p>Your All-in-One Smart Digital Platform</p>
-  <p>Explore • Learn • Create • Grow</p>
+<header>
+  <h1>RK DIGITAL WORLD 2026</h1>
+  <p>All in One Smart Digital Platform</p>
 </header>
-
-<!-- NAVIGATION -->
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#tools">AI Tools</a>
-  <a href="#trending">Trending</a>
-  <a href="#apps">Apps</a>
-  <a href="#learning">Learning</a>
+  <a href="#services">Services</a>
+  <a href="#login">Login</a>
   <a href="#about">About</a>
-  <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
+<div class="container">
 
-<section class="hero">
-
+<section id="home" class="card">
   <h2>Welcome to RK DIGITAL WORLD</h2>
-
   <p>
-    Discover AI Tools, Digital Technology,
-    Useful Apps and Free Learning Resources.
+    Explore AI Tools, Digital Learning,
+    Technology and Online Business Resources
+    in one platform.
   </p>
+</section>
 
-  <a class="button" href="#tools">Explore Now 🚀</a>
+<section id="login" class="card">
+
+<h2>👤 User Login / Signup</h2>
+
+<input type="email" id="email"
+placeholder="Enter your Email">
+
+<input type="password" id="password"
+placeholder="Enter your Password">
+
+<button onclick="signUp()">Sign Up</button>
+
+<button onclick="login()">Login</button>
+
+<button onclick="testConnection()">Test Connection</button>
+
+<button onclick="logout()">Logout</button>
+
+<p id="status">Please Login or Create Account.</p>
 
 </section>
 
-<!-- AI TOOLS -->
+<section id="dashboard" class="card">
 
-<section id="tools">
+<h2>🎉 Welcome to Your Dashboard</h2>
 
-<h2>🤖 Explore AI Tools</h2>
+<p id="userEmail"></p>
 
-<input
-  class="search-box"
-  type="text"
-  id="searchInput"
-  placeholder="🔍 Search AI Tools..."
->
+<div class="grid">
 
-<div class="container" id="toolContainer">
-
-<div class="card">
-<h3>🤖 ChatGPT</h3>
-<p>AI assistant for writing and learning.</p>
-<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>🤖 AI Tools</h3>
+<p>Explore AI learning resources.</p>
 </div>
 
-<div class="card">
-<h3>🎨 Canva</h3>
-<p>Create designs, posters and graphics.</p>
-<a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>📚 Learning</h3>
+<p>Develop new digital skills.</p>
 </div>
 
-<div class="card">
-<h3>🎬 CapCut</h3>
-<p>Edit videos and create content.</p>
-<a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>💼 Online Business</h3>
+<p>Explore business resources.</p>
 </div>
 
-<div class="card">
-<h3>✨ Gemini</h3>
-<p>Explore Google's AI assistant.</p>
-<a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>🌐 Affiliate Marketing</h3>
+<p>Learn affiliate marketing basics.</p>
 </div>
 
-<div class="card">
-<h3>🎨 Adobe Firefly</h3>
-<p>Create AI images and designs.</p>
-<a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Explore</a>
 </div>
 
-<div class="card">
-<h3>🎥 Runway</h3>
-<p>Explore AI video creation.</p>
-<a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+</section>
+
+<section id="services" class="card">
+
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="feature">
+<h3>AI Technology</h3>
+<p>Discover AI tools and tutorials.</p>
 </div>
 
-<div class="card">
-<h3>🎙️ ElevenLabs</h3>
-<p>AI voice and audio tools.</p>
-<a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>Digital Skills</h3>
+<p>Learn useful online skills.</p>
 </div>
 
-<div class="card">
-<h3>✍️ Grammarly</h3>
-<p>Improve writing and grammar.</p>
-<a href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>Education</h3>
+<p>Improve your knowledge.</p>
 </div>
 
-<div class="card">
-<h3>🧠 Claude</h3>
-<p>AI assistant for ideas and writing.</p>
-<a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🔎 Perplexity</h3>
-<p>AI-powered information search.</p>
-<a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📝 Notion</h3>
-<p>Organize notes and projects.</p>
-<a href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📚 Coursera</h3>
-<p>Discover online courses.</p>
-<a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎨 Leonardo AI</h3>
-<p>Create AI images.</p>
-<a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🖼️ Ideogram</h3>
-<p>Create AI designs and images.</p>
-<a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎨 Microsoft Designer</h3>
-<p>Create designs using AI.</p>
-<a href="https://designer.microsoft.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎬 Pika</h3>
-<p>Create AI videos.</p>
-<a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎥 InVideo AI</h3>
-<p>Create videos using AI.</p>
-<a href="https://invideo.io/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎙️ Murf AI</h3>
-<p>Create AI voiceovers.</p>
-<a href="https://murf.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🔊 Speechify</h3>
-<p>Convert text into speech.</p>
-<a href="https://speechify.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎵 Suno AI</h3>
-<p>Create music using AI.</p>
-<a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎵 Udio</h3>
-<p>Explore AI music creation.</p>
-<a href="https://udio.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📊 Gamma</h3>
-<p>Create presentations using AI.</p>
-<a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📑 Slidesgo</h3>
-<p>Explore presentation templates.</p>
-<a href="https://slidesgo.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>💻 Replit</h3>
-<p>Build and code projects online.</p>
-<a href="https://replit.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>⌨️ Cursor</h3>
-<p>AI-powered coding editor.</p>
-<a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🔬 Elicit</h3>
-<p>AI research assistant.</p>
-<a href="https://elicit.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📚 NotebookLM</h3>
-<p>Research and learn with AI.</p>
-<a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>✍️ QuillBot</h3>
-<p>Writing and grammar assistance.</p>
-<a href="https://quillbot.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🌍 DeepL</h3>
-<p>Translate different languages.</p>
-<a href="https://www.deepl.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🧹 Cleanup Pictures</h3>
-<p>Remove unwanted objects from images.</p>
-<a href="https://cleanup.pictures/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🖼️ Remove.bg</h3>
-<p>Remove image backgrounds.</p>
-<a href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎬 VEED</h3>
-<p>Online video editing tools.</p>
-<a href="https://www.veed.io/" target="_blank" rel="noopener noreferrer">Explore</a>
+<div class="feature">
+<h3>Digital Business</h3>
+<p>Explore digital opportunities.</p>
 </div>
 
 </div>
 </section>
 
-<!-- TRENDING -->
-
-<section id="trending">
-
-<h2>🔥 Trending AI Tools</h2>
-
-<p style="color:#ddd;margin-bottom:20px;">
-Discover Popular AI Tools
-</p>
-
-<div class="container">
-
-<div class="card">
-<h3>🔥 Google AI Studio</h3>
-<p>Explore Google's AI development tools.</p>
-<a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎨 Ideogram</h3>
-<p>Create AI images and designs.</p>
-<a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎬 Kling AI</h3>
-<p>Explore AI video generation.</p>
-<a href="https://klingai.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎥 Pika</h3>
-<p>Create videos using AI.</p>
-<a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎙️ ElevenLabs</h3>
-<p>Explore AI voice generation.</p>
-<a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🧠 DeepSeek</h3>
-<p>Explore AI chat and assistance.</p>
-<a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📊 Gamma</h3>
-<p>Create presentations using AI.</p>
-<a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>🎨 Adobe Firefly</h3>
-<p>Create AI images and designs.</p>
-<a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-</div>
-</section>
-
-<!-- APPS -->
-
-<section id="apps">
-
-<h2>📱 Useful Apps</h2>
-
-<div class="container">
-
-<div class="card">
-<h3>▶️ YouTube</h3>
-<p>Watch and create videos.</p>
-<a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>💬 WhatsApp</h3>
-<p>Messaging and communication.</p>
-<a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>📸 Instagram</h3>
-<p>Share photos and videos.</p>
-<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-<div class="card">
-<h3>💻 GitHub</h3>
-<p>Explore coding and projects.</p>
-<a href="https://github.com/" target="_blank" rel="noopener noreferrer">Explore</a>
-</div>
-
-</div>
-</section>
-
-<!-- LEARNING -->
-
-<section id="learning">
-
-<h2>📚 Free Learning</h2>
-
-<div class="container">
-
-<div class="card">
-<h3>🎓 Khan Academy</h3>
-<p>Learn different subjects online.</p>
-<a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Learn More</a>
-</div>
-
-<div class="card">
-<h3>💡 Google Grow</h3>
-<p>Discover digital skills and training.</p>
-<a href="https://grow.google/" target="_blank" rel="noopener noreferrer">Learn More</a>
-</div>
-
-<div class="card">
-<h3>💻 freeCodeCamp</h3>
-<p>Learn coding and web development.</p>
-<a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Learn More</a>
-</div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-<h2>👑 About RK DIGITAL WORLD</h2>
+<section id="about" class="card">
+<h2>About RK DIGITAL WORLD</h2>
 
 <p>
-Welcome to RK DIGITAL WORLD!
-Discover AI tools, digital technology, useful apps
-and learning resources.
-Our mission is to make technology simple and accessible for everyone.
-</p>
-
-<h3 style="color:gold;margin-top:25px;">
-Our Mission
-</h3>
-
-<p>
-🤖 Explore AI Technology<br>
-📚 Learn Digital Skills<br>
-💡 Discover Useful Tools<br>
-🚀 Grow Your Knowledge
+RK DIGITAL WORLD 2026 is an all-in-one
+digital platform designed to explore
+technology, education, AI tools and
+digital business resources.
 </p>
 
 </section>
-
-<!-- RECOMMENDED PRODUCTS -->
-
-<section id="affiliate">
-
-<h2>💰 Recommended Products</h2>
-
-<div class="container">
-
-<div class="card">
-<h3>🛒 Amazon Shopping</h3>
-<p>Discover useful products and shopping offers.</p>
-<a href="https://www.amazon.in/" target="_blank" rel="noopener noreferrer">Explore Products</a>
-</div>
 
 </div>
-
-<p style="color:#aaa;margin-top:20px;font-size:13px;">
-Affiliate links can be added after joining an eligible affiliate program.
-</p>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>📩 Contact Us</h2>
-
-<form action="https://formsubmit.com.rajmetre550@gmail.com" method="POST">
-
-<input
-  type="text"
-  name="name"
-  placeholder="Your Name"
-  required
->
-
-<input
-  type="email"
-  name="email"
-  placeholder="Your Email"
-  required
->
-
-<textarea
-  name="message"
-  placeholder="Your Message"
-  required
-></textarea>
-
-<button type="submit">
-Send Message 📩
-</button>
-
-</form>
-
-</section>
-
-<!-- PRIVACY -->
-
-<section id="privacy">
-
-<h2>🔐 Privacy Policy</h2>
-
-<p style="color:#ddd;max-width:750px;margin:auto;line-height:1.8;">
-
-RK DIGITAL WORLD provides links to AI tools, apps and learning resources.
-
-External websites may collect information under their own privacy policies.
-
-Our contact form uses FormSubmit to process messages.
-Information submitted through the form may be processed by this third-party service.
-
-Please do not share passwords, financial details or other sensitive information.
-
-We do not control the privacy practices of external websites.
-
-</p>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer>
-
-<p>© 2026 RK DIGITAL WORLD | All Rights Reserved</p>
-
-<p>Explore • Learn • Create • Grow</p>
-
-<p style="margin-top:12px;">
-
-<a href="#home">Home</a> |
-<a href="#about">About</a> |
-<a href="#contact">Contact</a> |
-<a href="#privacy">Privacy</a>
-
-</p>
-
+<p>© 2026 RK DIGITAL WORLD</p>
+<p>All Rights Reserved</p>
 </footer>
 
-<!-- SEARCH FUNCTION -->
-
 <script>
 
-const searchInput = document.getElementById("searchInput");
+// SUPABASE CONFIGURATION
 
-searchInput.addEventListener("input", function() {
+const SUPABASE_URL =
+"https://evbdmapmwlsmsgxuzian.supabase.co";
 
-  const searchText = this.value.toLowerCase();
-
-  const cards = document.querySelectorAll("#toolContainer .card");
-
-  cards.forEach(function(card) {
-
-    const cardText = card.innerText.toLowerCase();
-
-    if (cardText.includes(searchText)) {
-      card.classList.remove("hidden");
-    } else {
-      card.classList.add("hidden");
-    }
-
-  });
-
-});
-
-</script>
-<section id="auth">
-  <h2>👤 RK DIGITAL WORLD Login</h2>
-
-  <input type="email" id="email"
-  placeholder="Enter Email">
-
-  <input type="password" id="password"
-  placeholder="Enter Password">
-
-  <br><br>
-
-  <button onclick="signUp()">Sign Up</button>
-
-  <button onclick="login()">Login</button>
-<button onclick="testConnection()">
-  Test Supabase Connection
-</button>
-  <button onclick="logout()">Logout</button>
-
-  <p id="status"></p>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-async function testConnection() {
-  const { data, error } = await supabaseClient.auth.getSession();
-
-  if (error) {
-    alert("Connection Error: " + error.message);
-  } else {
-    alert("Supabase Connection Successful!");
-  }
-}
-<script>
-const SUPABASE_URL = "https://evbdmapmwlsmsgxuzian.supabase.co";
-
-const SUPABASE_KEY = sb_publishable_2SnMISzsOQp2OJ1bA9-Vgg_yarSMgrI
+const SUPABASE_KEY =
+"sb_publishable_2SnMISzsOQp2OJ1bA9-Vgg_yarSMgrI";
 
 const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
+  SUPABASE_URL,
+  SUPABASE_KEY
 );
 
+// STATUS MESSAGE
 
+function showStatus(message) {
+  document.getElementById("status").innerText = message;
+}
+
+// SIGN UP
 
 async function signUp() {
-  const email = document.getElementById("email").value;
+
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
-  const { error } = await supabaseClient.auth.signUp({
-    email,
-    password
-  });
+  if (!email || !password) {
+    showStatus("Please enter Email and Password.");
+    return;
+  }
 
-  document.getElementById("status").innerText =
-    error ? error.message : "Check your email for confirmation!";
+  if (password.length < 6) {
+    showStatus("Password must contain at least 6 characters.");
+    return;
+  }
+
+  showStatus("Creating your account...");
+
+  const { data, error } =
+    await supabaseClient.auth.signUp({
+      email: email,
+      password: password
+    });
+
+  if (error) {
+    showStatus("Signup Error: " + error.message);
+    return;
+  }
+
+  if (data.session) {
+    showStatus("Signup Successful!");
+    updateDashboard(data.session.user);
+  } else {
+    showStatus("Account created. Please check your email for confirmation.");
+  }
 }
+
+// LOGIN
 
 async function login() {
-const email = document.getElementById("email").value.trim();
-const password = document.getElementById("password").value;
 
-const { data, error } = await supabaseClient.auth.signInWithPassword({
-email: email,
-password: password
-});
-
-if (error) {
-document.getElementById("status").innerText =
-"Login Error: " + error.message;
-return;
-}
-
-document.getElementById("status").innerText =
-"Login Successful! Welcome to RK DIGITAL WORLD.";
-  }
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
-  const { error } = await supabaseClient.auth.signInWithPassword({
-    email,
-    password
-  });
+  if (!email || !password) {
+    showStatus("Please enter Email and Password.");
+    return;
+  }
 
-  document.getElementById("status").innerText =
-    error ? error.message : "Login Successful!";
+  showStatus("Logging in...");
+
+  const { data, error } =
+    await supabaseClient.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
+
+  if (error) {
+    showStatus("Login Error: " + error.message);
+    return;
+  }
+
+  showStatus("Login Successful!");
+  updateDashboard(data.user);
 }
+
+// DASHBOARD
+
+function updateDashboard(user) {
+
+  document.getElementById("dashboard").style.display = "block";
+
+  document.getElementById("userEmail").innerText =
+    "Logged in as: " + user.email;
+
+}
+
+// LOGOUT
 
 async function logout() {
+
   const { error } = await supabaseClient.auth.signOut();
 
-  document.getElementById("status").innerText =
-    error ? error.message : "Logged Out!";
+  if (error) {
+    showStatus("Logout Error: " + error.message);
+    return;
+  }
+
+  document.getElementById("dashboard").style.display = "none";
+
+  showStatus("Successfully Logged Out.");
 }
+
+// CONNECTION TEST
+
+async function testConnection() {
+
+  showStatus("Checking Supabase connection...");
+
+  try {
+
+    const response = await fetch(
+      SUPABASE_URL + "/auth/v1/health",
+      {
+        method: "GET",
+        headers: {
+          "apikey": SUPABASE_KEY
+        }
+      }
+    );
+
+    if (response.ok) {
+      showStatus("Supabase Connection Successful!");
+    } else {
+      showStatus("Supabase Response Error: " + response.status);
+    }
+
+  } catch (error) {
+
+    showStatus("Connection Error: " + error.message);
+
+  }
+}
+
+// CHECK EXISTING SESSION
+
+async function checkSession() {
+
+  const { data, error } =
+    await supabaseClient.auth.getSession();
+
+  if (error) {
+    showStatus("Session Error: " + error.message);
+    return;
+  }
+
+  if (data.session) {
+    updateDashboard(data.session.user);
+    showStatus("Welcome Back!");
+  }
+
+}
+
+checkSession();
+
 </script>
+
 </body>
   </html>
