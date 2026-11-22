@@ -456,5 +456,90 @@ checkSession();
 <p>Learn online professional skills.</p>
 <a href="https://www.linkedin.com/jobs/" target="_blank">Explore Jobs</a>
 </div></div></section>
+<section class="card" id="earning-tracker"><h2>💰 My Earning Tracker</h2><input type="text" id="workName" placeholder="Work Name"><select id="workCategory">
+<option value="Survey">Online Survey</option>
+<option value="YouTube">YouTube</option>
+<option value="Affiliate">Affiliate Marketing</option>
+<option value="Freelancing">Freelancing</option>
+<option value="Voice">Voice Recording</option>
+<option value="Other">Other</option>
+</select><input type="number" id="earningAmount" placeholder="Enter Amount ₹" min="0" step="0.01"><button onclick="addEarning()">Add Earning</button>
+
+<h3 id="totalEarning">Total Earnings: ₹0</h3><div id="earningList"></div></section><script>
+let earnings = JSON.parse(
+ localStorage.getItem("rkEarnings") || "[]"
+);
+
+function displayEarnings() {
+
+ let total = 0;
+ let list = "";
+
+ earnings.forEach((item,index) => {
+
+ total += item.amount;
+
+ list += `
+ <div class="feature">
+ <h3>${escapeText(item.name)}</h3>
+ <p>${escapeText(item.category)}</p>
+ <p>₹${item.amount.toFixed(2)}</p>
+ <button onclick="deleteEarning(${index})">Delete</button>
+ </div>
+ `;
+
+ });
+
+ document.getElementById("totalEarning").innerText =
+ "Total Earnings: ₹" + total.toFixed(2);
+
+ document.getElementById("earningList").innerHTML = list;
+
+}
+
+function addEarning() {
+
+ const name = document.getElementById("workName").value.trim();
+ const category = document.getElementById("workCategory").value;
+ const amount = Number(document.getElementById("earningAmount").value);
+
+ if (!name || !Number.isFinite(amount) || amount <= 0) {
+   alert("Enter valid work name and amount.");
+   return;
+ }
+
+ earnings.push({name,category,amount});
+
+ localStorage.setItem("rkEarnings",JSON.stringify(earnings));
+
+ document.getElementById("workName").value = "";
+ document.getElementById("earningAmount").value = "";
+
+ displayEarnings();
+
+}
+
+function deleteEarning(index) {
+
+ earnings.splice(index,1);
+
+ localStorage.setItem("rkEarnings",JSON.stringify(earnings));
+
+ displayEarnings();
+
+}
+
+function escapeText(value) {
+ return String(value).replace(/[&<>"']/g, char => ({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+ }[char]));
+}
+
+displayEarnings();
+  </script>
 </body>
   </html>
