@@ -833,14 +833,24 @@ searchInput.addEventListener("input", function() {
   <button onclick="signUp()">Sign Up</button>
 
   <button onclick="login()">Login</button>
-
+<button onclick="testConnection()">
+  Test Supabase Connection
+</button>
   <button onclick="logout()">Logout</button>
 
   <p id="status"></p>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+async function testConnection() {
+  const { data, error } = await supabaseClient.auth.getSession();
 
+  if (error) {
+    alert("Connection Error: " + error.message);
+  } else {
+    alert("Supabase Connection Successful!");
+  }
+}
 <script>
 const SUPABASE_URL = "https://evbdmapmwlsmsgxuzian.supabase.co";
 
